@@ -40,7 +40,7 @@
     <hr>
 
     <?php
-    // 5. Create a PHP variable that is an array containing 'PHP', 'HTML' and 'Javascript'.
+    // 5 Create a PHP variable that is an array containing 'PHP', 'HTML' and 'Javascript'.
     $languages = array("PHP", "HTML", "Javascript");
 
     // Use the array to output an unordered list.
