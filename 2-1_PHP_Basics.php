@@ -57,7 +57,7 @@
     <p id="js-message">Loading...</p>
 
     <script>
-        // Simple Javascript to demonstrate the combination of languages
+        // Javascript to demonstrate the combination of languages
         const messageElement = document.getElementById('js-message');
         messageElement.innerHTML = "This text was updated by <strong>Javascript</strong>!";
         messageElement.style.color = "green";
