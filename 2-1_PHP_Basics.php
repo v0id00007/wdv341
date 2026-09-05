@@ -40,30 +40,24 @@
     <hr>
 
     <?php
-    // 5 Create a PHP variable that is an array containing 'PHP', 'HTML' and 'Javascript'.
-    $languages = array("PHP", "HTML", "Javascript");
-
-    // Use the array to output an unordered list.
-    echo "<h3>Technologies Used:</h3>";
-    echo "<ul>";
-    foreach($languages as $lang) {
-        echo "<li>" . $lang . "</li>";
-    }
-    echo "</ul>";
+    // 5. Create a PHP variable that is an array containing 'PHP', 'HTML' and 'Javascript'.
+    $skills = array('PHP', 'HTML', 'Javascript');
     ?>
-
-    <hr>
-
-    <p id="js-message">Loading...</p>
-
     <script>
-        // Javascript to demonstrate the combination of languages
-        const messageElement = document.getElementById('js-message');
-        messageElement.innerHTML = "This text was updated by <strong>Javascript</strong>!";
-        messageElement.style.color = "green";
-        
-        console.log("Page loaded successfully with PHP, HTML, and JS.");
-    </script>
+        // Output PHP array as JavaScript array
+        var skills = <?php echo json_encode($skills); ?>;
+        var ul = document.createElement('ul');
+        skills.forEach(function(skill) {
+            var li = document.createElement('li');
+            li.textContent = skill;
+            ul.appendChild(li);
+        });
+        document.body.appendChild(ul);
+
+// Verify it's a JavaScript array
+console.log(skills); // ['PHP', 'HTML', 'Javascript']
+console.log(Array.isArray(skills)); // true
+</script>
 
 </body>
 </html>
